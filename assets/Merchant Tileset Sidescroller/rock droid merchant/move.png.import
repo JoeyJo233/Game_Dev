@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://f33twpk8dd2s"
-path="res://.godot/imported/Sci-fi Tileset re-imagined.png-50de1f3fc79a7d37778e014a036fbeac.ctex"
+uid="uid://4s5oj20vj8h"
+path="res://.godot/imported/move.png-33944d3a0063951cc380a75c2bf23100.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Sci-fi Tileset re-imagined.png"
-dest_files=["res://.godot/imported/Sci-fi Tileset re-imagined.png-50de1f3fc79a7d37778e014a036fbeac.ctex"]
+source_file="res://assets/Merchant Tileset Sidescroller/rock droid merchant/move.png"
+dest_files=["res://.godot/imported/move.png-33944d3a0063951cc380a75c2bf23100.ctex"]
 
 [params]
 
