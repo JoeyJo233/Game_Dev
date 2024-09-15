@@ -1,0 +1,38 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1726259070
+export_presets.cfg::TextFile::-1::1726089533::0::1::::<><>::
+icon.svg::CompressedTexture2D::4739423042449416166::1725998656::1726254738::1::::<><>::
+README.md::TextFile::-1::1726090413::0::1::::<><>::
+::res://assets/::1726254962
+::res://assets/Merchant Tileset Sidescroller/::1726254956
+Sci-fi Tileset re-imagined.png::CompressedTexture2D::2942682538726896907::1726254944::1726254956::1::::<><>::
+::res://assets/Merchant Tileset Sidescroller/merchant/::1726254956
+idle.png::CompressedTexture2D::3434372400226857719::1726254944::1726254956::1::::<><>::
+walk.png::CompressedTexture2D::8404207949531768550::1726254944::1726254956::1::::<><>::
+::res://assets/Merchant Tileset Sidescroller/rock droid merchant/::1726254956
+down.png::CompressedTexture2D::7216486047864563529::1726254944::1726254956::1::::<><>::
+move.png::CompressedTexture2D::61014185045820261::1726254944::1726254956::1::::<><>::
+no.png::CompressedTexture2D::1301973308873169580::1726254944::1726254956::1::::<><>::
+up.png::CompressedTexture2D::6423214909763330640::1726254944::1726254956::1::::<><>::
+::res://assets/spritesOld/::1726255030
+coin.png::CompressedTexture2D::1068603024902983618::1726000722::1726254854::1::::<><>::
+fruit.png::CompressedTexture2D::2024243589918036015::1726000722::1726254854::1::::<><>::
+game_manager.gd::GDScript::-1::1726000722::0::1::::<>Node<>::
+killzone.gd::GDScript::-1::1726088185::0::1::::<>Area2D<>::
+knight.png::CompressedTexture2D::8567363988697854126::1726000722::1726254855::1::::<><>::
+platforms.png::CompressedTexture2D::3839312706786254030::1726000722::1726254854::1::::<><>::
+slime_green.png::CompressedTexture2D::1500395811996139988::1726000722::1726254855::1::::<><>::
+slime_purple.png::CompressedTexture2D::7276479043534323848::1726000722::1726254855::1::::<><>::
+world_tileset.png::CompressedTexture2D::2685173763956516975::1726000722::1726254855::1::::<><>::
+{23168389-C529-F06B-A35A-6CA609091541}.jpg::CompressedTexture2D::5564949774015455273::1726000722::1726254855::1::::<><>::
+::res://scenes/::1726259060
+coin.tscn::PackedScene::3745644334217950350::1726259060::0::1::::<><>::res://scripts/coin.gd<>uid://phv0ap1dys1w::::res://assets/spritesOld/coin.png
+game.tscn::PackedScene::1874523475169939421::1726258988::0::1::::<><>::uid://dy8aoahhh7k3::::res://scenes/player.tscn<>uid://c63qcg4qrq28f::::res://scenes/platform.tscn<>uid://btmohkp73ntkg::::res://scenes/coin.tscn<>uid://gtx3vdl3ivha::::res://scenes/killzone.tscn<>uid://g1bspnvwj1q6::::res://scenes/slime.tscn
+killzone.tscn::PackedScene::461803840380608098::1726254854::0::1::::<><>::res://assets/spritesOld/killzone.gd
+platform.tscn::PackedScene::7007473501440727587::1726254854::0::1::::<><>::uid://bux16i1eyp2de::::res://assets/spritesOld/platforms.png
+player.tscn::PackedScene::262115993427441912::1726254854::0::1::::<><>::uid://ducdh6tfi4dry::::res://assets/spritesOld/knight.png<>res://scripts/player.gd
+slime.tscn::PackedScene::474900553633440303::1726254854::0::1::::<><>::uid://vm2kgt3585um::::res://assets/spritesOld/slime_green.png<>res://scripts/slime.gd<>uid://gtx3vdl3ivha::::res://scenes/killzone.tscn
+::res://scripts/::1726259044
+coin.gd::GDScript::-1::1726259044::0::1::::<>Area2D<>::
+player.gd::GDScript::-1::1726089289::0::1::::<>CharacterBody2D<>::
+slime.gd::GDScript::-1::1726087092::0::1::::<>Node2D<>::
