@@ -691,4 +691,4 @@ libraries = {
 autoplay = "move"
 
 [node name="slime" parent="." instance=ExtResource("6_vgxt4")]
-position = Vector2(-164, -52)
+position = Vector2(-159, -56)
