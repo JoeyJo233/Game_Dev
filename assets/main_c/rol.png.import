@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bh6ps0rovi0ax"
-path="res://.godot/imported/Sci-fi Tileset re-imagined.png-422d6fb01394c96221e1ab24ea7710c5.ctex"
+uid="uid://cqclml3d42aon"
+path="res://.godot/imported/rol.png-2a5a6cf462bbfdff941e25f78f86a6d9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Merchant Tileset Sidescroller/Sci-fi Tileset re-imagined.png"
-dest_files=["res://.godot/imported/Sci-fi Tileset re-imagined.png-422d6fb01394c96221e1ab24ea7710c5.ctex"]
+source_file="res://assets/main_c/rol.png"
+dest_files=["res://.godot/imported/rol.png-2a5a6cf462bbfdff941e25f78f86a6d9.ctex"]
 
 [params]
 

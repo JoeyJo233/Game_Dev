@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bl6dwqilsqg01"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_713x3"]
+size = Vector2(371, 8)
+
+[node name="stair_back" type="AnimatableBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(132.5, -1)
+shape = SubResource("RectangleShape2D_713x3")
+one_way_collision = true
