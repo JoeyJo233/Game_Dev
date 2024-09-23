@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://g1bspnvwj1q6"]
+[gd_scene load_steps=14 format=3 uid="uid://g1bspnvwj1q6"]
 
 [ext_resource type="Texture2D" uid="uid://vm2kgt3585um" path="res://assets/spritesOld/slime_green.png" id="1_5grlp"]
 [ext_resource type="Script" path="res://scripts/slime.gd" id="1_l8l68"]
@@ -43,13 +43,55 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t2lhv"]
 size = Vector2(9, 11)
 
-[node name="slime" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5xp8r"]
+size = Vector2(14, 3.5)
+
+[sub_resource type="Animation" id="Animation_b4v8o"]
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 2]
+}
+
+[sub_resource type="Animation" id="Animation_8ku1n"]
+resource_name = "fly"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [2, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7gsqp"]
+_data = {
+"RESET": SubResource("Animation_b4v8o"),
+"fly": SubResource("Animation_8ku1n")
+}
+
+[node name="slime" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 5
 script = ExtResource("1_l8l68")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_ela8w")
 autoplay = "default"
-frame_progress = 0.439745
 
 [node name="killzone" parent="." instance=ExtResource("2_7eceh")]
 
@@ -64,3 +106,13 @@ target_position = Vector2(5, 0)
 [node name="RayCastLeft" type="RayCast2D" parent="."]
 position = Vector2(0, 6)
 target_position = Vector2(-4, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 9.25)
+shape = SubResource("RectangleShape2D_5xp8r")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_7gsqp")
+}
+autoplay = "fly"

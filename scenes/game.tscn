@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://1ybelxwvhfjp"]
+[gd_scene load_steps=36 format=4 uid="uid://1ybelxwvhfjp"]
 
 [ext_resource type="PackedScene" uid="uid://dy8aoahhh7k3" path="res://scenes/player.tscn" id="1_2ryjp"]
 [ext_resource type="Texture2D" uid="uid://d2yvs2est1fuf" path="res://assets/Glacial-mountains-parallax-background_vnitti/Layers/sky_lightened.png" id="1_ycjmt"]
@@ -20,6 +20,8 @@
 [ext_resource type="PackedScene" uid="uid://ccbpp044n8j31" path="res://scenes/platforms/T.tscn" id="18_aoltc"]
 [ext_resource type="PackedScene" uid="uid://bm1o5l6kphdjf" path="res://scenes/platforms/O.tscn" id="19_3fh5p"]
 [ext_resource type="PackedScene" uid="uid://cj8sdemjodphi" path="res://scenes/platforms/L.tscn" id="20_t8rp3"]
+[ext_resource type="PackedScene" uid="uid://g1bspnvwj1q6" path="res://scenes/slime.tscn" id="21_2pbl6"]
+[ext_resource type="PackedScene" uid="uid://tvdrc133q8gj" path="res://scenes/fly.tscn" id="21_a5fi2"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3xijl"]
 load_path = "res://.godot/imported/Sci-fi Tileset re-imagined.png-50de1f3fc79a7d37778e014a036fbeac.ctex"
@@ -943,6 +945,21 @@ _data = {
 "platform_move": SubResource("Animation_hefug")
 }
 
+[sub_resource type="Animation" id="Animation_cms5e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-760, -466)]
+}
+
 [sub_resource type="Animation" id="Animation_mbvcg"]
 resource_name = "platform_move"
 length = 3.0
@@ -958,21 +975,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(-778, -455), Vector2(-778, -455), Vector2(-778, -711), Vector2(-778, -711)]
-}
-
-[sub_resource type="Animation" id="Animation_cms5e"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-760, -466)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ayov6"]
@@ -1631,3 +1633,9 @@ position = Vector2(406, -286)
 
 [node name="platform3" parent="." instance=ExtResource("20_t8rp3")]
 position = Vector2(357, -373)
+
+[node name="slime" parent="." instance=ExtResource("21_2pbl6")]
+position = Vector2(1183, -415)
+
+[node name="fly" parent="." instance=ExtResource("21_a5fi2")]
+position = Vector2(1065, -475)
