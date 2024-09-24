@@ -14,3 +14,7 @@ res://scenes/global.gdshader
 res://scripts/slime.gd
 res://scripts/enemies.gd
 res://scenes/coin.tscn
+res://scripts/game_manager.gd
+res://scenes/word/exit.gd
+res://scenes/word/exit.tscn
+res://scripts/exit.gd

@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1726948861
+::res://::1727211378
 export_presets.cfg::TextFile::-1::1726775746::0::1::::<><>::
 icon.svg::CompressedTexture2D::4739423042449416166::1726775746::1726775782::1::::<><>::
 README.md::TextFile::-1::1726775746::0::1::::<><>::
@@ -43,7 +43,7 @@ up.png::CompressedTexture2D::6423214909763330640::1726775746::1726775782::1::::<
 ::res://assets/nono_sprite/::1726775782
 nono idle.png::CompressedTexture2D::4973749181011652068::1726775746::1726775782::1::::<><>::
 Nono run.png::CompressedTexture2D::6437414018475000931::1726775746::1726775782::1::::<><>::
-::res://assets/spritesOld/::1726863880
+::res://assets/spritesOld/::1727190592
 coin.png::CompressedTexture2D::1068603024902983618::1726775746::1726775782::1::::<><>::
 fly.png::CompressedTexture2D::4733844094362395863::1726863875::1726863875::1::::<><>::
 fly_dead.png::CompressedTexture2D::204474819304003718::1726863880::1726863880::1::::<><>::
@@ -54,44 +54,49 @@ platforms.png::CompressedTexture2D::3839312706786254030::1726775746::1726775782:
 Slime.png::CompressedTexture2D::1985120812339179776::1726777034::1726777034::1::::<><>::
 slime_green.png::CompressedTexture2D::1500395811996139988::1726775746::1726775782::1::::<><>::
 slime_purple.png::CompressedTexture2D::7276479043534323848::1726775746::1726775782::1::::<><>::
+spritesheet_tiles.png::CompressedTexture2D::3222008159898433319::1727190592::1727190592::1::::<><>::
 Statue.png::CompressedTexture2D::3737059520595625345::1726775746::1726775782::1::::<><>::
 world_tileset.png::CompressedTexture2D::2685173763956516975::1726775746::1726775782::1::::<><>::
 {23168389-C529-F06B-A35A-6CA609091541}.jpg::CompressedTexture2D::5564949774015455273::1726775746::1726775782::1::::<><>::
 ::res://assets/world_sprites/::1726775782
 Sci-fi Tileset re-imagined.png::CompressedTexture2D::2942682538726896907::1726775746::1726775782::1::::<><>::
 world_sprites_Green.png::CompressedTexture2D::703664933745111588::1726775746::1726775782::1::::<><>::
-::res://scenes/::1726949258
-coin.tscn::PackedScene::3745644334217950350::1726775746::0::1::::<><>::res://scripts/coin.gd<>uid://phv0ap1dys1w::::res://assets/spritesOld/coin.png
-enemies.tscn::PackedScene::7090798297996026972::1726949258::0::1::::<><>::uid://3juwdd0ttkbo::::res://assets/spritesOld/Slime.png<>res://scripts/enemies.gd
-fly.tscn::PackedScene::1377152617954444825::1726949258::0::1::::<><>::uid://b8pdyra5ipo4n::::res://assets/spritesOld/fly.png<>uid://koyjnu5cpa6d::::res://assets/spritesOld/fly_move.png<>uid://c6bw18nm2d5g::::res://assets/spritesOld/fly_dead.png<>uid://r50w8rs1xodt::::res://scenes/hitbox.tscn<>uid://6h0wlirt34bq::::res://scenes/hurtbox.tscn
-game.tscn::PackedScene::1874523475169939421::1726949258::0::1::::<><>::uid://dy8aoahhh7k3::::res://scenes/player.tscn<>uid://d2yvs2est1fuf::::res://assets/Glacial-mountains-parallax-background_vnitti/Layers/sky_lightened.png<>uid://5qnfeu7h50rk::::res://assets/Glacial-mountains-parallax-background_vnitti/Layers/long/longCoud_bg.png<>uid://ol2wbn87pwe::::res://assets/Glacial-mountains-parallax-background_vnitti/Layers/long/longMoutain.png<>uid://c63qcg4qrq28f::::res://scenes/platform.tscn<>uid://nx1t4c6f6210::::res://assets/Glacial-mountains-parallax-background_vnitti/Layers/long/longCloud3.png<>uid://btmohkp73ntkg::::res://scenes/coin.tscn<>uid://cyj2ignfv3xdt::::res://assets/Glacial-mountains-parallax-background_vnitti/Layers/long/longCloud2.png<>uid://gtx3vdl3ivha::::res://scenes/killzone.tscn<>uid://dfrb643600g2y::::res://assets/Glacial-mountains-parallax-background_vnitti/Layers/long/longCloud1.png<>uid://dflpt7m4pkcip::::res://assets/Glacial-mountains-parallax-background_vnitti/Layers/cloud_lonely.png<>uid://ka4i2acbq18k::::res://assets/world_sprites/world_sprites_Green.png<>uid://bvd1f6qbkvmdf::::res://scenes/platforms/platform_thin.tscn<>uid://bl6dwqilsqg01::::res://scenes/stair_collision/stair_back.tscn<>uid://onh0f57ms6re::::res://scenes/stair_collision/air_wall.tscn<>uid://btii3a52d2cpt::::res://assets/spritesOld/Statue.png<>uid://b56lbq3mq58yg::::res://scenes/nono.tscn<>uid://ccbpp044n8j31::::res://scenes/platforms/T.tscn<>uid://bm1o5l6kphdjf::::res://scenes/platforms/O.tscn<>uid://cj8sdemjodphi::::res://scenes/platforms/L.tscn
+::res://effects/::1726949440
+::res://scenes/::1727211989
+coin.tscn::PackedScene::3745644334217950350::1727113503::0::1::::<><>::res://scripts/coin.gd<>uid://phv0ap1dys1w::::res://assets/spritesOld/coin.png
+fly.tscn::PackedScene::1377152617954444825::1727211570::0::1::::<><>::uid://b8pdyra5ipo4n::::res://assets/spritesOld/fly.png<>uid://koyjnu5cpa6d::::res://assets/spritesOld/fly_move.png<>uid://c6bw18nm2d5g::::res://assets/spritesOld/fly_dead.png<>uid://r50w8rs1xodt::::res://scenes/hitbox.tscn<>uid://6h0wlirt34bq::::res://scenes/hurtbox.tscn
+game.tscn::PackedScene::1874523475169939421::1727113555::0::1::::<><>::uid://dy8aoahhh7k3::::res://scenes/player.tscn<>uid://d2yvs2est1fuf::::res://assets/Glacial-mountains-parallax-background_vnitti/Layers/sky_lightened.png<>uid://5qnfeu7h50rk::::res://assets/Glacial-mountains-parallax-background_vnitti/Layers/long/longCoud_bg.png<>uid://ol2wbn87pwe::::res://assets/Glacial-mountains-parallax-background_vnitti/Layers/long/longMoutain.png<>uid://c63qcg4qrq28f::::res://scenes/platform.tscn<>uid://nx1t4c6f6210::::res://assets/Glacial-mountains-parallax-background_vnitti/Layers/long/longCloud3.png<>uid://btmohkp73ntkg::::res://scenes/coin.tscn<>uid://cyj2ignfv3xdt::::res://assets/Glacial-mountains-parallax-background_vnitti/Layers/long/longCloud2.png<>uid://gtx3vdl3ivha::::res://scenes/killzone.tscn<>uid://dfrb643600g2y::::res://assets/Glacial-mountains-parallax-background_vnitti/Layers/long/longCloud1.png<>uid://dflpt7m4pkcip::::res://assets/Glacial-mountains-parallax-background_vnitti/Layers/cloud_lonely.png<>uid://ka4i2acbq18k::::res://assets/world_sprites/world_sprites_Green.png<>uid://bvd1f6qbkvmdf::::res://scenes/platforms/platform_thin.tscn<>uid://bl6dwqilsqg01::::res://scenes/stair_collision/stair_back.tscn<>uid://onh0f57ms6re::::res://scenes/stair_collision/air_wall.tscn<>uid://btii3a52d2cpt::::res://assets/spritesOld/Statue.png<>uid://b56lbq3mq58yg::::res://scenes/nono.tscn<>uid://ccbpp044n8j31::::res://scenes/platforms/T.tscn<>uid://bm1o5l6kphdjf::::res://scenes/platforms/O.tscn<>uid://cj8sdemjodphi::::res://scenes/platforms/L.tscn<>uid://g1bspnvwj1q6::::res://scenes/slime.tscn<>uid://tvdrc133q8gj::::res://scenes/fly.tscn
 game_1.tscn::PackedScene::7891206840576956419::1726777687::0::1::::<><>::uid://d2yvs2est1fuf::::res://assets/Glacial-mountains-parallax-background_vnitti/Layers/sky_lightened.png<>uid://5qnfeu7h50rk::::res://assets/Glacial-mountains-parallax-background_vnitti/Layers/long/longCoud_bg.png<>uid://ol2wbn87pwe::::res://assets/Glacial-mountains-parallax-background_vnitti/Layers/long/longMoutain.png<>uid://nx1t4c6f6210::::res://assets/Glacial-mountains-parallax-background_vnitti/Layers/long/longCloud3.png<>uid://cyj2ignfv3xdt::::res://assets/Glacial-mountains-parallax-background_vnitti/Layers/long/longCloud2.png<>uid://dfrb643600g2y::::res://assets/Glacial-mountains-parallax-background_vnitti/Layers/long/longCloud1.png<>uid://dflpt7m4pkcip::::res://assets/Glacial-mountains-parallax-background_vnitti/Layers/cloud_lonely.png<>uid://ka4i2acbq18k::::res://assets/world_sprites/world_sprites_Green.png<>uid://dy8aoahhh7k3::::res://scenes/player.tscn<>uid://gtx3vdl3ivha::::res://scenes/killzone.tscn<>uid://btmohkp73ntkg::::res://scenes/coin.tscn<>uid://c63qcg4qrq28f::::res://scenes/platform.tscn<>uid://bvd1f6qbkvmdf::::res://scenes/platforms/platform_thin.tscn<>uid://bl6dwqilsqg01::::res://scenes/stair_collision/stair_back.tscn<>uid://btii3a52d2cpt::::res://assets/spritesOld/Statue.png<>uid://onh0f57ms6re::::res://scenes/stair_collision/air_wall.tscn<>uid://b56lbq3mq58yg::::res://scenes/nono.tscn<>uid://ccbpp044n8j31::::res://scenes/platforms/T.tscn<>uid://bm1o5l6kphdjf::::res://scenes/platforms/O.tscn<>uid://cj8sdemjodphi::::res://scenes/platforms/L.tscn
-hitbox.tscn::PackedScene::1256700647139145609::1726949258::0::1::::<><>::res://scripts/hitbox.gd
-hurtbox.tscn::PackedScene::2191862600256705238::1726949258::0::1::::<><>::res://scripts/hurtbox.gd
+global.gdshader::Shader::-1::1727211989::0::1::::<><>::
+global.tscn::PackedScene::8291273391252792598::1727113503::0::1::::<><>::res://scripts/global.gd<>res://scenes/global.gdshader
+hitbox.tscn::PackedScene::1256700647139145609::1727113503::0::1::::<><>::res://scripts/hitbox.gd
+hurtbox.tscn::PackedScene::2191862600256705238::1727113503::0::1::::<><>::res://scripts/hurtbox.gd
 killzone.tscn::PackedScene::461803840380608098::1726775746::0::1::::<><>::res://scripts/killzone.gd
-nono.tscn::PackedScene::4556752260120212138::1726949258::0::1::::<><>::res://scripts/nono.gd<>uid://cc4k6mhsxnp3y::::res://assets/nono_sprite/nono idle.png<>uid://cxyljeh4t0k0r::::res://assets/nono_sprite/Nono run.png
+nono.tscn::PackedScene::4556752260120212138::1727113503::0::1::::<><>::res://scripts/nono.gd<>uid://cc4k6mhsxnp3y::::res://assets/nono_sprite/nono idle.png<>uid://cxyljeh4t0k0r::::res://assets/nono_sprite/Nono run.png
 platform.tscn::PackedScene::7007473501440727587::1726775746::0::1::::<><>::uid://bh6ps0rovi0ax::::res://assets/world_sprites/Sci-fi Tileset re-imagined.png
-player.tscn::PackedScene::262115993427441912::1726949258::0::1::::<><>::res://scripts/player.gd<>uid://cwpvcfqch6yxb::::res://assets/main_c/idle.png<>uid://cs0uuqeq663id::::res://assets/main_c/run.png<>uid://cqclml3d42aon::::res://assets/main_c/rol.png
-global.tscn::PackedScene::8291273391252792598::1726949279::0::1::::<><>::res://scripts/global.gd
-slime.tscn::PackedScene::474900553633440303::1726949258::0::1::::<><>::uid://vm2kgt3585um::::res://assets/spritesOld/slime_green.png<>res://scripts/slime.gd<>uid://gtx3vdl3ivha::::res://scenes/killzone.tscn
-::res://scenes/platforms/::1726949258
+player.tscn::PackedScene::262115993427441912::1727113503::0::1::::<><>::res://scripts/player.gd<>uid://cwpvcfqch6yxb::::res://assets/main_c/idle.png<>uid://cs0uuqeq663id::::res://assets/main_c/run.png<>uid://cqclml3d42aon::::res://assets/main_c/rol.png
+slime.tscn::PackedScene::474900553633440303::1727188014::0::1::::<><>::uid://vm2kgt3585um::::res://assets/spritesOld/slime_green.png<>res://scripts/slime.gd<>uid://gtx3vdl3ivha::::res://scenes/killzone.tscn
+::res://scenes/platforms/::1727113503
 I.tscn::PackedScene::2821209066552147456::1726775746::0::1::::<><>::uid://ka4i2acbq18k::::res://assets/world_sprites/world_sprites_Green.png
 L.tscn::PackedScene::5473763918322793802::1726775746::0::1::::<><>::uid://ka4i2acbq18k::::res://assets/world_sprites/world_sprites_Green.png
 O.tscn::PackedScene::3283264866791387883::1726775746::0::1::::<><>::uid://ka4i2acbq18k::::res://assets/world_sprites/world_sprites_Green.png
 platform_thin.tscn::PackedScene::3868168757135776259::1726775746::0::1::::<><>::uid://ka4i2acbq18k::::res://assets/world_sprites/world_sprites_Green.png
-T.tscn::PackedScene::4916222333435786798::1726949258::0::1::::<><>::uid://ka4i2acbq18k::::res://assets/world_sprites/world_sprites_Green.png
+T.tscn::PackedScene::4916222333435786798::1727113503::0::1::::<><>::uid://ka4i2acbq18k::::res://assets/world_sprites/world_sprites_Green.png
 ::res://scenes/stair_collision/::1726775746
 air_wall.tscn::PackedScene::1009950695963814802::1726775746::0::1::::<><>::
 stair_back.tscn::PackedScene::3222715965788035460::1726775746::0::1::::<><>::
-::res://scripts/::1726949256
+::res://scenes/word/::1727211989
+game_01.tscn::PackedScene::4326131192243805199::1727184318::0::1::::<><>::uid://d2yvs2est1fuf::::res://assets/Glacial-mountains-parallax-background_vnitti/Layers/sky_lightened.png<>uid://5qnfeu7h50rk::::res://assets/Glacial-mountains-parallax-background_vnitti/Layers/long/longCoud_bg.png<>uid://ol2wbn87pwe::::res://assets/Glacial-mountains-parallax-background_vnitti/Layers/long/longMoutain.png<>uid://nx1t4c6f6210::::res://assets/Glacial-mountains-parallax-background_vnitti/Layers/long/longCloud3.png<>uid://cyj2ignfv3xdt::::res://assets/Glacial-mountains-parallax-background_vnitti/Layers/long/longCloud2.png<>uid://dfrb643600g2y::::res://assets/Glacial-mountains-parallax-background_vnitti/Layers/long/longCloud1.png<>uid://dflpt7m4pkcip::::res://assets/Glacial-mountains-parallax-background_vnitti/Layers/cloud_lonely.png<>uid://ka4i2acbq18k::::res://assets/world_sprites/world_sprites_Green.png<>uid://dy8aoahhh7k3::::res://scenes/player.tscn<>uid://gtx3vdl3ivha::::res://scenes/killzone.tscn<>uid://btmohkp73ntkg::::res://scenes/coin.tscn<>uid://c63qcg4qrq28f::::res://scenes/platform.tscn<>uid://bvd1f6qbkvmdf::::res://scenes/platforms/platform_thin.tscn<>uid://bl6dwqilsqg01::::res://scenes/stair_collision/stair_back.tscn<>uid://btii3a52d2cpt::::res://assets/spritesOld/Statue.png<>uid://onh0f57ms6re::::res://scenes/stair_collision/air_wall.tscn<>uid://b56lbq3mq58yg::::res://scenes/nono.tscn<>uid://ccbpp044n8j31::::res://scenes/platforms/T.tscn<>uid://bm1o5l6kphdjf::::res://scenes/platforms/O.tscn<>uid://cj8sdemjodphi::::res://scenes/platforms/L.tscn<>uid://g1bspnvwj1q6::::res://scenes/slime.tscn<>uid://tvdrc133q8gj::::res://scenes/fly.tscn
+exit.tscn::PackedScene::5017589038530357252::1727211989::0::1::::<><>::uid://bl51aehsvig84::::res://assets/spritesOld/spritesheet_tiles.png
+exit.gd::GDScript::-1::1727211989::0::1::::<>Area2D<>::
+::res://scripts/::1727211570
 coin.gd::GDScript::-1::1726775746::0::1::::<>Area2D<>::
-enemies.gd::GDScript::-1::1726872054::0::1::::<>CharacterBody2D<>::
-game_manager.gd::GDScript::-1::1726775746::0::1::::<>Node<>::
+fly.gd::GDScript::-1::1727211570::0::1::::<>CharacterBody2D<>::
+game_manager.gd::GDScript::-1::1727195267::0::1::::<>Node<>::
+global.gd::GDScript::-1::1727211570::0::1::::<>Node<>::
 hitbox.gd::GDScript::-1::1726866903::0::1::::<>Area2D<>::
 hurtbox.gd::GDScript::-1::1726867049::0::1::::<>Area2D<>::
 killzone.gd::GDScript::-1::1726775746::0::1::::<>Area2D<>::
 nono.gd::GDScript::-1::1726775746::0::1::::<>Node2D<>::
 player.gd::GDScript::-1::1726775746::0::1::::<>CharacterBody2D<>::
-fly.gd::GDScript::-1::1726922269::0::1::::<>CharacterBody2D<>::
-global.gd::GDScript::-1::1726949279::0::1::::<>Node<>::
-slime.gd::GDScript::-1::1726775746::0::1::::<>Node2D<>::
+slime.gd::GDScript::-1::1727110931::0::1::::<>CharacterBody2D<>::
