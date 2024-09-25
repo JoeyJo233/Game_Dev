@@ -8,13 +8,13 @@ shader = ExtResource("2_kanmv")
 shader_parameter/cutoff = 0.754
 shader_parameter/feather = 0.107
 
+[sub_resource type="Animation" id="Animation_mqk2o"]
+length = 0.001
+
 [sub_resource type="Animation" id="Animation_e6f57"]
 resource_name = "fade-in"
 length = 0.4
 loop_mode = 2
-
-[sub_resource type="Animation" id="Animation_mqk2o"]
-length = 0.001
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tftd5"]
 _data = {

@@ -1,11 +1,10 @@
-[gd_scene load_steps=37 format=4 uid="uid://1ybelxwvhfjp"]
+[gd_scene load_steps=37 format=4 uid="uid://dt16gigwujrl7"]
 
 [ext_resource type="PackedScene" uid="uid://dy8aoahhh7k3" path="res://scenes/player.tscn" id="1_2ryjp"]
 [ext_resource type="Texture2D" uid="uid://d2yvs2est1fuf" path="res://assets/Glacial-mountains-parallax-background_vnitti/Layers/sky_lightened.png" id="1_ycjmt"]
 [ext_resource type="Texture2D" uid="uid://5qnfeu7h50rk" path="res://assets/Glacial-mountains-parallax-background_vnitti/Layers/long/longCoud_bg.png" id="2_mv1u2"]
 [ext_resource type="Texture2D" uid="uid://ol2wbn87pwe" path="res://assets/Glacial-mountains-parallax-background_vnitti/Layers/long/longMoutain.png" id="3_6rta0"]
 [ext_resource type="PackedScene" uid="uid://c63qcg4qrq28f" path="res://scenes/platform.tscn" id="3_mhdwv"]
-[ext_resource type="PackedScene" uid="uid://cdqs7t5ni53s7" path="res://scenes/word/exit.tscn" id="3_uvapk"]
 [ext_resource type="Texture2D" uid="uid://nx1t4c6f6210" path="res://assets/Glacial-mountains-parallax-background_vnitti/Layers/long/longCloud3.png" id="4_eer8p"]
 [ext_resource type="PackedScene" uid="uid://btmohkp73ntkg" path="res://scenes/coin.tscn" id="4_n04ku"]
 [ext_resource type="Texture2D" uid="uid://cyj2ignfv3xdt" path="res://assets/Glacial-mountains-parallax-background_vnitti/Layers/long/longCloud2.png" id="5_2cgqx"]
@@ -23,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://cj8sdemjodphi" path="res://scenes/platforms/L.tscn" id="20_t8rp3"]
 [ext_resource type="PackedScene" uid="uid://g1bspnvwj1q6" path="res://scenes/slime.tscn" id="21_2pbl6"]
 [ext_resource type="PackedScene" uid="uid://tvdrc133q8gj" path="res://scenes/fly.tscn" id="21_a5fi2"]
+[ext_resource type="PackedScene" uid="uid://cdqs7t5ni53s7" path="res://scenes/word/exit.tscn" id="23_vv3h2"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3xijl"]
 load_path = "res://.godot/imported/Sci-fi Tileset re-imagined.png-50de1f3fc79a7d37778e014a036fbeac.ctex"
@@ -1641,5 +1641,5 @@ position = Vector2(1183, -415)
 [node name="fly" parent="." instance=ExtResource("21_a5fi2")]
 position = Vector2(1065, -475)
 
-[node name="exit" parent="." instance=ExtResource("3_uvapk")]
-position = Vector2(1583, 127)
+[node name="exit" parent="." instance=ExtResource("23_vv3h2")]
+position = Vector2(-1026, -9)
