@@ -1453,7 +1453,7 @@ tile_set = SubResource("TileSet_ygo78")
 [node name="player" parent="." instance=ExtResource("1_2ryjp")]
 visibility_layer = 3
 z_index = 1
-position = Vector2(905, -449)
+position = Vector2(553, -499)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(66, -2)

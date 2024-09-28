@@ -6,6 +6,11 @@ const acceleration = max_speed / 0.2
 const gravity = 2
 enum Direction {LEFT = -1, RIGHT = 1}
 
+const GRAVITY = 200
+
+
+var WALK_SPEED = 200
+
 @onready var ray_cast_right: RayCast2D = $RayCastRight
 @onready var ray_cast_left: RayCast2D = $RayCastLeft
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
@@ -15,16 +20,19 @@ enum Direction {LEFT = -1, RIGHT = 1}
 func _ready() -> void:
 	pass # Replace with function body.
 
+	#var collision = move_and_collide(velocity * delta)
+	#if collision:
+		#velocity = velocity.slide(collision.get_normal())
 func _physics_process(delta: float) -> void:
 	var was_on_wall = is_on_wall()
-	var collision = move_and_collide(velocity * delta)
-	if collision:
-		velocity = velocity.slide(collision.get_normal())
-
-# using move_and_slide
+	velocity.y += delta * GRAVITY
+# "move_and_slide" already takes delta time into account.
 	move_and_slide()
+	
 	if is_on_wall() and not was_on_wall:
+		print("111")
 		direction *= -1
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

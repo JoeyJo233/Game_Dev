@@ -12,8 +12,6 @@ const MAX_SPEED = 120.0
 @export var acceleration  = 50 / 0.2
 @export var is_dead = false
 
-
-
 var target_position = null
 
 func _process(delta: float) -> void:
