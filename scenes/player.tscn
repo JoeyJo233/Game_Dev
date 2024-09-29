@@ -1,9 +1,11 @@
-[gd_scene load_steps=37 format=3 uid="uid://dy8aoahhh7k3"]
+[gd_scene load_steps=41 format=3 uid="uid://dy8aoahhh7k3"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_k04gy"]
 [ext_resource type="Texture2D" uid="uid://cwpvcfqch6yxb" path="res://assets/main_c/idle.png" id="2_71kdj"]
 [ext_resource type="Texture2D" uid="uid://cs0uuqeq663id" path="res://assets/main_c/run.png" id="3_1ttn2"]
 [ext_resource type="Texture2D" uid="uid://cqclml3d42aon" path="res://assets/main_c/rol.png" id="3_45vq6"]
+[ext_resource type="PackedScene" uid="uid://r50w8rs1xodt" path="res://scenes/hitbox.tscn" id="5_fo4xb"]
+[ext_resource type="PackedScene" uid="uid://6h0wlirt34bq" path="res://scenes/hurtbox.tscn" id="6_kfebr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h26hc"]
 atlas = ExtResource("2_71kdj")
@@ -242,6 +244,12 @@ animations = [{
 radius = 5.5
 height = 21.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_allgf"]
+size = Vector2(7.5, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o6e3u"]
+size = Vector2(10, 21)
+
 [node name="player" type="CharacterBody2D"]
 z_index = 5
 collision_layer = 2
@@ -253,5 +261,26 @@ animation = &"run"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 0)
+position = Vector2(5, -1)
 shape = SubResource("CapsuleShape2D_6y21g")
+
+[node name="Hitbox" parent="." instance=ExtResource("5_fo4xb")]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+position = Vector2(5.25, 10.5)
+shape = SubResource("RectangleShape2D_allgf")
+
+[node name="Hurtbox" parent="." instance=ExtResource("6_kfebr")]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0"]
+position = Vector2(4, -2)
+shape = SubResource("RectangleShape2D_o6e3u")
+
+[connection signal="hurt" from="Hurtbox" to="." method="_on_hurtbox_hurt"]
+
+[editable path="Hitbox"]
+[editable path="Hurtbox"]

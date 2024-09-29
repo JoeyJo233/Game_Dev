@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-const speed = 60
-const max_speed = 50
+const speed = 10
+const max_speed = 10
 const acceleration = max_speed / 0.2
 const gravity = 2
 enum Direction {LEFT = -1, RIGHT = 1}
@@ -9,7 +9,8 @@ enum Direction {LEFT = -1, RIGHT = 1}
 const GRAVITY = 200
 
 
-var WALK_SPEED = 200
+var WALK_SPEED = 50
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 @onready var ray_cast_right: RayCast2D = $RayCastRight
 @onready var ray_cast_left: RayCast2D = $RayCastLeft
@@ -49,5 +50,14 @@ func _process(delta: float) -> void:
 		#animated_sprite_2d.flip_h = true
 	animated_sprite_2d.flip_h = velocity.x > 0
 	
-	
 	position.x += speed * delta * direction
+
+
+func _on_hurtbox_hurt() -> void:
+	print("444")
+	if animation_player.has_animation("reset"):
+		print("22")
+		animation_player.play("reset") 
+	else:
+		print("223")
+		queue_free()

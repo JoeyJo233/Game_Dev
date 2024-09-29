@@ -1,8 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://g1bspnvwj1q6"]
+[gd_scene load_steps=18 format=3 uid="uid://g1bspnvwj1q6"]
 
 [ext_resource type="Texture2D" uid="uid://vm2kgt3585um" path="res://assets/spritesOld/slime_green.png" id="1_5grlp"]
 [ext_resource type="Script" path="res://scripts/slime.gd" id="1_l8l68"]
 [ext_resource type="PackedScene" uid="uid://gtx3vdl3ivha" path="res://scenes/killzone.tscn" id="2_7eceh"]
+[ext_resource type="PackedScene" uid="uid://r50w8rs1xodt" path="res://scenes/hitbox.tscn" id="4_np418"]
+[ext_resource type="PackedScene" uid="uid://6h0wlirt34bq" path="res://scenes/hurtbox.tscn" id="5_m0jy0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_om87c"]
 atlas = ExtResource("1_5grlp")
@@ -83,6 +85,12 @@ _data = {
 "fly": SubResource("Animation_8ku1n")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ssql"]
+size = Vector2(14, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vx0yd"]
+size = Vector2(10, 2)
+
 [node name="slime" type="CharacterBody2D"]
 collision_layer = 4
 collision_mask = 5
@@ -120,3 +128,21 @@ autoplay = "fly"
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
 position = Vector2(-0.5, 4)
 scale = Vector2(1.45, 1.3)
+
+[node name="Hitbox" parent="." instance=ExtResource("4_np418")]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_2ssql")
+
+[node name="Hurtbox" parent="." instance=ExtResource("5_m0jy0")]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0"]
+shape = SubResource("RectangleShape2D_vx0yd")
+
+[editable path="Hitbox"]
+[editable path="Hurtbox"]

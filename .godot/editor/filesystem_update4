@@ -20,3 +20,4 @@ res://scenes/word/exit.tscn
 res://scripts/exit.gd
 res://scenes/word/game_01.tscn
 res://scenes/word/game02.tscn
+res://scripts/player.gd
