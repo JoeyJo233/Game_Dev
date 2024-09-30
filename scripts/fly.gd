@@ -1,7 +1,6 @@
 extends CharacterBody2D
 
 #const gravity = 2000
-const MAX_SPEED = 120.0
 
 @export var gravity = 2000
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
@@ -11,14 +10,14 @@ const MAX_SPEED = 120.0
 
 var max_speed: int = 50
 var acceleration  = 50 / 0.2
-@export var is_dead = false
+@export var is_dead: bool = true
 
 var target_position = null
 
 func _process(delta: float) -> void:
-	if is_dead:
+	if is_dead == true:
 		print("not dead")
-		velocity.x=0
+		velocity.x = 0
 		velocity.y += gravity * delta
 	else:
 		var bodies = player_sensor.get_overlapping_bodies()
@@ -46,3 +45,9 @@ func _calc_target_position():
 		return null
 			
 	return target_position	
+
+
+
+func _on_hurtbox_hurt() -> void:
+	print("555")
+	animation_player.play("death")
