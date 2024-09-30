@@ -10,21 +10,25 @@ extends CharacterBody2D
 
 var max_speed: int = 50
 var acceleration  = 50 / 0.2
-@export var is_dead: bool = true
+@export var is_dea: bool = false
 
 var target_position = null
 
 func _process(delta: float) -> void:
-	if is_dead == true:
-		print("not dead")
+	print(is_dea)
+	if is_dea:
+		print(" dead")
 		velocity.x = 0
 		velocity.y += gravity * delta
 	else:
+		print("444")
 		var bodies = player_sensor.get_overlapping_bodies()
 		#玩家不在视野范围内， velocity慢慢变成0
 		if bodies.is_empty():
+			print("4446")
 			velocity = velocity.move_toward(Vector2.ZERO, acceleration * delta)
 		else:
+			print("4445")
 			#冲着玩家的方向去
 			var direction = global_position.direction_to(bodies[0].global_position)
 			velocity = velocity.move_toward(direction * max_speed, acceleration * delta)			

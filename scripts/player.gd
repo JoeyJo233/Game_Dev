@@ -54,4 +54,5 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_hurtbox_hurt() -> void:
+	print("666")
 	get_tree().reload_current_scene()

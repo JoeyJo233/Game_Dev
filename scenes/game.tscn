@@ -1636,10 +1636,10 @@ position = Vector2(406, -286)
 position = Vector2(357, -373)
 
 [node name="slime" parent="." instance=ExtResource("21_2pbl6")]
-position = Vector2(1011, -444)
+position = Vector2(954, -447)
 
 [node name="fly" parent="." instance=ExtResource("21_a5fi2")]
-position = Vector2(949, -442)
+position = Vector2(962, -468)
 
 [node name="exit" parent="." instance=ExtResource("3_uvapk")]
 position = Vector2(1583, 127)
