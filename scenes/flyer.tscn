@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://bro1vg2mo34r5"]
 
-[ext_resource type="Texture2D" uid="uid://bshhlmlacb5na" path="res://assets/spritesOld/fly.png" id="1_14td6"]
+[ext_resource type="Texture2D" uid="uid://cc42ydy7gx6eg" path="res://assets/spritesOld/fly.png" id="1_14td6"]
 [ext_resource type="Script" path="res://scenes/flyer.gd" id="1_m2nvt"]
-[ext_resource type="Texture2D" uid="uid://cjcobcerpjxq3" path="res://assets/spritesOld/fly_dead.png" id="3_e34ge"]
+[ext_resource type="Texture2D" uid="uid://cmrj6ja2npnhs" path="res://assets/spritesOld/fly_dead.png" id="3_e34ge"]
 [ext_resource type="PackedScene" uid="uid://gtx3vdl3ivha" path="res://scenes/killzone.tscn" id="4_n7sk8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7ks11"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://b56lbq3mq58yg"]
 
-[ext_resource type="Script" path="res://scripts/nono.gd" id="1_0ng76"]
+[ext_resource type="Script" path="res://scenes/nono.gd" id="1_0ng76"]
 [ext_resource type="Texture2D" uid="uid://cc4k6mhsxnp3y" path="res://assets/nono_sprite/nono idle.png" id="2_1x2yr"]
 [ext_resource type="Texture2D" uid="uid://cxyljeh4t0k0r" path="res://assets/nono_sprite/Nono run.png" id="3_thsip"]
 
