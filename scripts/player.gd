@@ -7,6 +7,7 @@ const jump_max = 1
 var jump_count = 0
 var dash_count = 0
 
+
 # Fixed frequency operation default 60 times/second
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
