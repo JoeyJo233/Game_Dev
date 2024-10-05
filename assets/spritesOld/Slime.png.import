@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmrj6ja2npnhs"
-path="res://.godot/imported/fly_dead.png-3dd30cc1ee17c9c0643c0154f3f5ec9e.ctex"
+uid="uid://3juwdd0ttkbo"
+path="res://.godot/imported/Slime.png-c037f0c322cadd0309e0fe58331b0d3a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/spritesOld/fly_dead.png"
-dest_files=["res://.godot/imported/fly_dead.png-3dd30cc1ee17c9c0643c0154f3f5ec9e.ctex"]
+source_file="res://assets/spritesOld/Slime.png"
+dest_files=["res://.godot/imported/Slime.png-c037f0c322cadd0309e0fe58331b0d3a.ctex"]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=4 uid="uid://1ybelxwvhfjp"]
+[gd_scene load_steps=37 format=4 uid="uid://dt16gigwujrl7"]
 
 [ext_resource type="PackedScene" uid="uid://dy8aoahhh7k3" path="res://scenes/player.tscn" id="1_2ryjp"]
 [ext_resource type="Texture2D" uid="uid://d2yvs2est1fuf" path="res://assets/Glacial-mountains-parallax-background_vnitti/Layers/sky_lightened.png" id="1_ycjmt"]
@@ -12,8 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://dfrb643600g2y" path="res://assets/Glacial-mountains-parallax-background_vnitti/Layers/long/longCloud1.png" id="6_8klkk"]
 [ext_resource type="Texture2D" uid="uid://dflpt7m4pkcip" path="res://assets/Glacial-mountains-parallax-background_vnitti/Layers/cloud_lonely.png" id="7_a4gl8"]
 [ext_resource type="Texture2D" uid="uid://ka4i2acbq18k" path="res://assets/world_sprites/world_sprites_Green.png" id="8_omfum"]
-[ext_resource type="Texture2D" uid="uid://d1xoeneblj56v" path="res://assets/spritesOld/fly_move.png" id="9_wnosn"]
-[ext_resource type="Texture2D" uid="uid://cmrj6ja2npnhs" path="res://assets/spritesOld/fly_dead.png" id="10_tsxu3"]
 [ext_resource type="PackedScene" uid="uid://bvd1f6qbkvmdf" path="res://scenes/platforms/platform_thin.tscn" id="13_hifsw"]
 [ext_resource type="PackedScene" uid="uid://bl6dwqilsqg01" path="res://scenes/stair_collision/stair_back.tscn" id="14_o207b"]
 [ext_resource type="PackedScene" uid="uid://onh0f57ms6re" path="res://scenes/stair_collision/air_wall.tscn" id="15_ubeha"]
@@ -22,9 +20,9 @@
 [ext_resource type="PackedScene" uid="uid://ccbpp044n8j31" path="res://scenes/platforms/T.tscn" id="18_aoltc"]
 [ext_resource type="PackedScene" uid="uid://bm1o5l6kphdjf" path="res://scenes/platforms/O.tscn" id="19_3fh5p"]
 [ext_resource type="PackedScene" uid="uid://cj8sdemjodphi" path="res://scenes/platforms/L.tscn" id="20_t8rp3"]
-[ext_resource type="FontFile" uid="uid://b7wauygk2p2pv" path="res://assets/font/PixelOperator8.ttf" id="21_o203w"]
-[ext_resource type="PackedScene" uid="uid://bro1vg2mo34r5" path="res://scenes/flyer.tscn" id="22_d57au"]
-[ext_resource type="PackedScene" uid="uid://g1bspnvwj1q6" path="res://scenes/slime.tscn" id="22_da5kn"]
+[ext_resource type="PackedScene" uid="uid://g1bspnvwj1q6" path="res://scenes/slime.tscn" id="21_2pbl6"]
+[ext_resource type="PackedScene" uid="uid://tvdrc133q8gj" path="res://scenes/fly.tscn" id="21_a5fi2"]
+[ext_resource type="PackedScene" uid="uid://cdqs7t5ni53s7" path="res://scenes/word/exit.tscn" id="23_vv3h2"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3xijl"]
 load_path = "res://.godot/imported/Sci-fi Tileset re-imagined.png-50de1f3fc79a7d37778e014a036fbeac.ctex"
@@ -903,54 +901,10 @@ texture = ExtResource("8_omfum")
 25:13/0 = 0
 28:12/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mx4vi"]
-texture = ExtResource("9_wnosn")
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wxapp"]
-texture = ExtResource("10_tsxu3")
-1:1/0 = 0
-6:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-6:2/0 = 0
-7:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-4:3/0 = 0
-5:3/0 = 0
-6:3/0 = 0
-7:3/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-3:4/0 = 0
-4:4/0 = 0
-5:4/0 = 0
-6:4/0 = 0
-7:4/0 = 0
-1:5/0 = 0
-2:5/0 = 0
-3:5/0 = 0
-4:5/0 = 0
-5:5/0 = 0
-6:5/0 = 0
-7:5/0 = 0
-2:6/0 = 0
-3:6/0 = 0
-4:6/0 = 0
-5:6/0 = 0
-
 [sub_resource type="TileSet" id="TileSet_ygo78"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_0q8o1")
 sources/1 = SubResource("TileSetAtlasSource_i2f6b")
-sources/3 = SubResource("TileSetAtlasSource_mx4vi")
-sources/4 = SubResource("TileSetAtlasSource_wxapp")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_c2874"]
 
@@ -1499,7 +1453,7 @@ tile_set = SubResource("TileSet_ygo78")
 [node name="player" parent="." instance=ExtResource("1_2ryjp")]
 visibility_layer = 3
 z_index = 1
-position = Vector2(-553, -29)
+position = Vector2(553, -499)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(66, -2)
@@ -1658,9 +1612,9 @@ rotation = -0.00126168
 scale = Vector2(0.567374, 2.37954)
 
 [node name="air_pane3" parent="Tower/air_wall" instance=ExtResource("15_ubeha")]
-position = Vector2(-12, -1147)
+position = Vector2(-168, -1141)
 rotation = -0.00126168
-scale = Vector2(4.4164, 2.18416)
+scale = Vector2(1.4164, 2.18416)
 
 [node name="air_pane2" parent="Tower/air_wall" instance=ExtResource("15_ubeha")]
 position = Vector2(-236, -1235)
@@ -1670,7 +1624,7 @@ scale = Vector2(0.567374, 2.37954)
 [node name="Nono" parent="." instance=ExtResource("17_lon34")]
 visibility_layer = 2
 z_index = 1
-position = Vector2(-766, -70)
+position = Vector2(-661, -467)
 
 [node name="platform" parent="." instance=ExtResource("18_aoltc")]
 position = Vector2(500, -326)
@@ -1681,54 +1635,11 @@ position = Vector2(406, -286)
 [node name="platform3" parent="." instance=ExtResource("20_t8rp3")]
 position = Vector2(357, -373)
 
-[node name="Label" type="Label" parent="."]
-offset_left = -116.0
-offset_top = -1275.0
-offset_right = 64.0
-offset_bottom = -1252.0
-theme_override_fonts/font = ExtResource("21_o203w")
-text = "Director: Joey"
+[node name="slime" parent="." instance=ExtResource("21_2pbl6")]
+position = Vector2(1183, -415)
 
-[node name="Label2" type="Label" parent="."]
-offset_left = -117.0
-offset_top = -1230.0
-offset_right = 63.0
-offset_bottom = -1207.0
-theme_override_fonts/font = ExtResource("21_o203w")
-text = "Programming: Molly, Joey"
+[node name="fly" parent="." instance=ExtResource("21_a5fi2")]
+position = Vector2(1065, -475)
 
-[node name="Label3" type="Label" parent="."]
-offset_left = 358.0
-offset_top = -1239.0
-offset_right = 664.0
-offset_bottom = -1216.0
-theme_override_fonts/font = ExtResource("21_o203w")
-text = "Art Design: Joey"
-
-[node name="Label5" type="Label" parent="."]
-offset_left = 858.0
-offset_top = -1259.0
-offset_right = 1164.0
-offset_bottom = -1236.0
-theme_override_fonts/font = ExtResource("21_o203w")
-text = "Thanks for playing! Tack!"
-
-[node name="Label4" type="Label" parent="."]
-offset_left = 358.0
-offset_top = -1283.0
-offset_right = 734.0
-offset_bottom = -1260.0
-theme_override_fonts/font = ExtResource("21_o203w")
-text = "Mechanism Design: Molly, Joey
-"
-
-[node name="Node" type="Node" parent="."]
-
-[node name="Flyer" parent="Node" instance=ExtResource("22_d57au")]
-position = Vector2(-85, -84)
-
-[node name="slime2" parent="Node" instance=ExtResource("22_da5kn")]
-position = Vector2(-325, -44)
-
-[node name="slime" parent="Node" instance=ExtResource("22_da5kn")]
-position = Vector2(276, -43)
+[node name="exit" parent="." instance=ExtResource("23_vv3h2")]
+position = Vector2(-1026, -9)

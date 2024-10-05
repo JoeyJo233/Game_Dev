@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmrj6ja2npnhs"
-path="res://.godot/imported/fly_dead.png-3dd30cc1ee17c9c0643c0154f3f5ec9e.ctex"
+uid="uid://bl51aehsvig84"
+path="res://.godot/imported/spritesheet_tiles.png-040788bca4dd2361154a7e1633ef646c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/spritesOld/fly_dead.png"
-dest_files=["res://.godot/imported/fly_dead.png-3dd30cc1ee17c9c0643c0154f3f5ec9e.ctex"]
+source_file="res://assets/spritesOld/spritesheet_tiles.png"
+dest_files=["res://.godot/imported/spritesheet_tiles.png-040788bca4dd2361154a7e1633ef646c.ctex"]
 
 [params]
 
