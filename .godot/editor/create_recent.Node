@@ -1,5 +1,7 @@
-CollisionShape2D
+TextEdit
+Button
 Node2D
+CollisionShape2D
 AnimatedSprite2D
 Node
 CharacterBody2D
@@ -8,7 +10,5 @@ RayCast2D
 AnimationPlayer
 AnimationTree
 Label
-TextEdit
 TileMapLayer
 Sprite2D
-ParallaxLayer
