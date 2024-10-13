@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dy8aoahhh7k3" path="res://scenes/player.tscn" id="9_kqq8e"]
 [ext_resource type="PackedScene" uid="uid://gtx3vdl3ivha" path="res://scenes/killzone.tscn" id="10_ukiso"]
 [ext_resource type="PackedScene" uid="uid://btmohkp73ntkg" path="res://scenes/coin.tscn" id="11_hae6t"]
-[ext_resource type="PackedScene" uid="uid://c63qcg4qrq28f" path="res://scenes/platform.tscn" id="12_2o41d"]
+[ext_resource type="PackedScene" uid="uid://c63qcg4qrq28f" path="res://scenes/platforms/platform.tscn" id="12_2o41d"]
 [ext_resource type="PackedScene" uid="uid://bvd1f6qbkvmdf" path="res://scenes/platforms/platform_thin.tscn" id="13_ptnho"]
 [ext_resource type="PackedScene" uid="uid://bl6dwqilsqg01" path="res://scenes/stair_collision/stair_back.tscn" id="14_dob5j"]
 [ext_resource type="Texture2D" uid="uid://btii3a52d2cpt" path="res://assets/spritesOld/Statue.png" id="15_r557d"]
@@ -21,7 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://bm1o5l6kphdjf" path="res://scenes/platforms/O.tscn" id="19_g57ff"]
 [ext_resource type="PackedScene" uid="uid://cj8sdemjodphi" path="res://scenes/platforms/L.tscn" id="20_x2fol"]
 [ext_resource type="PackedScene" uid="uid://g1bspnvwj1q6" path="res://scenes/slime.tscn" id="21_g3dqo"]
-[ext_resource type="PackedScene" path="res://scenes/fly.tscn" id="22_13l3i"]
+[ext_resource type="PackedScene" uid="uid://tvdrc133q8gj" path="res://scenes/fly.tscn" id="22_13l3i"]
 [ext_resource type="PackedScene" uid="uid://cdqs7t5ni53s7" path="res://scenes/word/exit.tscn" id="23_qxshk"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3xijl"]

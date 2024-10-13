@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://d2yvs2est1fuf" path="res://assets/Glacial-mountains-parallax-background_vnitti/Layers/sky_lightened.png" id="1_ycjmt"]
 [ext_resource type="Texture2D" uid="uid://5qnfeu7h50rk" path="res://assets/Glacial-mountains-parallax-background_vnitti/Layers/long/longCoud_bg.png" id="2_mv1u2"]
 [ext_resource type="Texture2D" uid="uid://ol2wbn87pwe" path="res://assets/Glacial-mountains-parallax-background_vnitti/Layers/long/longMoutain.png" id="3_6rta0"]
-[ext_resource type="PackedScene" uid="uid://c63qcg4qrq28f" path="res://scenes/platform.tscn" id="3_mhdwv"]
+[ext_resource type="PackedScene" uid="uid://c63qcg4qrq28f" path="res://scenes/platforms/platform.tscn" id="3_mhdwv"]
 [ext_resource type="Texture2D" uid="uid://nx1t4c6f6210" path="res://assets/Glacial-mountains-parallax-background_vnitti/Layers/long/longCloud3.png" id="4_eer8p"]
 [ext_resource type="PackedScene" uid="uid://btmohkp73ntkg" path="res://scenes/coin.tscn" id="4_n04ku"]
 [ext_resource type="Texture2D" uid="uid://cyj2ignfv3xdt" path="res://assets/Glacial-mountains-parallax-background_vnitti/Layers/long/longCloud2.png" id="5_2cgqx"]
@@ -1500,7 +1500,7 @@ tile_set = SubResource("TileSet_ygo78")
 [node name="player" parent="." instance=ExtResource("1_2ryjp")]
 visibility_layer = 3
 z_index = 1
-position = Vector2(-553, -29)
+position = Vector2(-507, -1280)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(66, -2)
@@ -1662,6 +1662,21 @@ scale = Vector2(0.567374, 2.37954)
 position = Vector2(-12, -1147)
 rotation = -0.00126168
 scale = Vector2(4.4164, 2.18416)
+
+[node name="air_pane4" parent="Tower/air_wall" instance=ExtResource("15_ubeha")]
+position = Vector2(1401, -1211)
+rotation = 1.56882
+scale = Vector2(0.336488, 2.18416)
+
+[node name="air_pane6" parent="Tower/air_wall" instance=ExtResource("15_ubeha")]
+position = Vector2(1732, -1459)
+rotation = 1.56882
+scale = Vector2(0.776405, 2.18416)
+
+[node name="air_pane5" parent="Tower/air_wall" instance=ExtResource("15_ubeha")]
+position = Vector2(1680, -1222)
+rotation = 3.14167
+scale = Vector2(0.896478, 2.18416)
 
 [node name="air_pane2" parent="Tower/air_wall" instance=ExtResource("15_ubeha")]
 position = Vector2(-236, -1235)
