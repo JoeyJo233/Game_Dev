@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=4 uid="uid://1ybelxwvhfjp"]
+[gd_scene load_steps=42 format=4 uid="uid://1ybelxwvhfjp"]
 
 [ext_resource type="PackedScene" uid="uid://dy8aoahhh7k3" path="res://scenes/player.tscn" id="1_2ryjp"]
 [ext_resource type="Texture2D" uid="uid://d2yvs2est1fuf" path="res://assets/Glacial-mountains-parallax-background_vnitti/Layers/sky_lightened.png" id="1_ycjmt"]
@@ -25,6 +25,7 @@
 [ext_resource type="FontFile" uid="uid://b7wauygk2p2pv" path="res://assets/font/PixelOperator8.ttf" id="21_o203w"]
 [ext_resource type="PackedScene" uid="uid://bro1vg2mo34r5" path="res://scenes/flyer.tscn" id="22_d57au"]
 [ext_resource type="PackedScene" uid="uid://g1bspnvwj1q6" path="res://scenes/slime.tscn" id="22_da5kn"]
+[ext_resource type="PackedScene" uid="uid://cdqs7t5ni53s7" path="res://scenes/word/exit.tscn" id="26_iu0yo"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3xijl"]
 load_path = "res://.godot/imported/Sci-fi Tileset re-imagined.png-50de1f3fc79a7d37778e014a036fbeac.ctex"
@@ -1732,3 +1733,6 @@ position = Vector2(-325, -44)
 
 [node name="slime" parent="Node" instance=ExtResource("22_da5kn")]
 position = Vector2(276, -43)
+
+[node name="exit" parent="." instance=ExtResource("26_iu0yo")]
+position = Vector2(-1028, 12)

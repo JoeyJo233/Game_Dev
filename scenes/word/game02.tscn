@@ -21,7 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://bm1o5l6kphdjf" path="res://scenes/platforms/O.tscn" id="19_3fh5p"]
 [ext_resource type="PackedScene" uid="uid://cj8sdemjodphi" path="res://scenes/platforms/L.tscn" id="20_t8rp3"]
 [ext_resource type="PackedScene" uid="uid://g1bspnvwj1q6" path="res://scenes/slime.tscn" id="21_2pbl6"]
-[ext_resource type="PackedScene" uid="uid://tvdrc133q8gj" path="res://scenes/fly.tscn" id="21_a5fi2"]
+[ext_resource type="PackedScene" path="res://scenes/fly.tscn" id="21_a5fi2"]
 [ext_resource type="PackedScene" uid="uid://cdqs7t5ni53s7" path="res://scenes/word/exit.tscn" id="23_vv3h2"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3xijl"]
@@ -1453,7 +1453,7 @@ tile_set = SubResource("TileSet_ygo78")
 [node name="player" parent="." instance=ExtResource("1_2ryjp")]
 visibility_layer = 3
 z_index = 1
-position = Vector2(553, -499)
+position = Vector2(475, -49)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(66, -2)
