@@ -14,3 +14,6 @@ res://pick.tscn
 res://scenes/pick.tscn
 res://scenes/coin.tscn
 res://scripts/player.gd
+res://scenes/game_1.tscn
+res://scenes/word/exit.tscn
+res://scripts/exit.gd

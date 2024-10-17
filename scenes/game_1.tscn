@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://dkota2pix5j3h"]
+[gd_scene load_steps=34 format=4 uid="uid://dkota2pix5j3h"]
 
 [ext_resource type="Texture2D" uid="uid://d2yvs2est1fuf" path="res://assets/Glacial-mountains-parallax-background_vnitti/Layers/sky_lightened.png" id="1_xyaiw"]
 [ext_resource type="Texture2D" uid="uid://5qnfeu7h50rk" path="res://assets/Glacial-mountains-parallax-background_vnitti/Layers/long/longCoud_bg.png" id="2_p1pye"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://c63qcg4qrq28f" path="res://scenes/platforms/platform.tscn" id="12_nwof5"]
 [ext_resource type="PackedScene" uid="uid://bggu5vyq58d1y" path="res://scenes/platforms/I.tscn" id="14_3lyng"]
 [ext_resource type="PackedScene" uid="uid://b56lbq3mq58yg" path="res://scenes/nono.tscn" id="17_pclwp"]
+[ext_resource type="PackedScene" uid="uid://bmeahf20i7ypc" path="res://scenes/pick.tscn" id="18_nkn3d"]
 [ext_resource type="PackedScene" uid="uid://ccbpp044n8j31" path="res://scenes/platforms/T.tscn" id="18_ofy28"]
 [ext_resource type="PackedScene" uid="uid://bm1o5l6kphdjf" path="res://scenes/platforms/O.tscn" id="19_t1u8r"]
 [ext_resource type="PackedScene" uid="uid://cj8sdemjodphi" path="res://scenes/platforms/L.tscn" id="20_fxd02"]
@@ -897,6 +898,21 @@ sources/1 = SubResource("TileSetAtlasSource_i2f6b")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_c2874"]
 
+[sub_resource type="Animation" id="Animation_ix5b8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1058, 42)]
+}
+
 [sub_resource type="Animation" id="Animation_kqx65"]
 resource_name = "new_animation"
 length = 4.0
@@ -914,7 +930,13 @@ tracks/0/keys = {
 "values": [Vector2(1028, 159), Vector2(1028, 159), Vector2(1028, -34), Vector2(1028, -34)]
 }
 
-[sub_resource type="Animation" id="Animation_ix5b8"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_inswh"]
+_data = {
+"RESET": SubResource("Animation_ix5b8"),
+"new_animation": SubResource("Animation_kqx65")
+}
+
+[sub_resource type="Animation" id="Animation_el1xh"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -926,13 +948,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1058, 42)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_inswh"]
-_data = {
-"RESET": SubResource("Animation_ix5b8"),
-"new_animation": SubResource("Animation_kqx65")
+"values": [Vector2(1130, 312)]
 }
 
 [sub_resource type="Animation" id="Animation_wl346"]
@@ -950,21 +966,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(1119, 413), Vector2(1119, 413), Vector2(1119, -228), Vector2(1119, -228)]
-}
-
-[sub_resource type="Animation" id="Animation_el1xh"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1130, 312)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_37qic"]
@@ -1154,3 +1155,7 @@ position = Vector2(-592, -263)
 libraries = {
 "": SubResource("AnimationLibrary_jkui2")
 }
+
+[node name="pick" parent="." instance=ExtResource("18_nkn3d")]
+position = Vector2(-344, 435)
+scale = Vector2(1.46297, 1.35428)

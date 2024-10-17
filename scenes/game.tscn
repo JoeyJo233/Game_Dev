@@ -1743,13 +1743,19 @@ text = "Mechanism Design: Molly, Joey
 [node name="Node" type="Node" parent="."]
 
 [node name="Flyer" parent="Node" instance=ExtResource("22_d57au")]
-position = Vector2(-85, -84)
+position = Vector2(212, -283)
 
 [node name="slime2" parent="Node" instance=ExtResource("22_da5kn")]
-position = Vector2(-325, -44)
+position = Vector2(-330, -50)
 
 [node name="slime" parent="Node" instance=ExtResource("22_da5kn")]
-position = Vector2(276, -43)
+position = Vector2(273, -50)
+
+[node name="slime3" parent="Node" instance=ExtResource("22_da5kn")]
+position = Vector2(600, -49)
+
+[node name="slime4" parent="Node" instance=ExtResource("22_da5kn")]
+position = Vector2(1203, -53)
 
 [node name="exit" parent="." instance=ExtResource("26_iu0yo")]
 position = Vector2(-1028, 12)

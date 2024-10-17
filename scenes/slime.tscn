@@ -1,51 +1,43 @@
-[gd_scene load_steps=11 format=3 uid="uid://g1bspnvwj1q6"]
+[gd_scene load_steps=10 format=3 uid="uid://g1bspnvwj1q6"]
 
-[ext_resource type="Texture2D" uid="uid://vm2kgt3585um" path="res://assets/spritesOld/slime_green.png" id="1_5grlp"]
 [ext_resource type="Script" path="res://scripts/slime.gd" id="1_l8l68"]
 [ext_resource type="PackedScene" uid="uid://gtx3vdl3ivha" path="res://scenes/killzone.tscn" id="2_7eceh"]
+[ext_resource type="Texture2D" uid="uid://n4kr0mjrou3f" path="res://assets/enemy_sprite/Untitled 2.png" id="2_bklow"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_om87c"]
-atlas = ExtResource("1_5grlp")
-region = Rect2(0, 24, 24, 24)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ewv2x"]
+atlas = ExtResource("2_bklow")
+region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xtv2o"]
-atlas = ExtResource("1_5grlp")
-region = Rect2(24, 24, 24, 24)
+[sub_resource type="AtlasTexture" id="AtlasTexture_s00qq"]
+atlas = ExtResource("2_bklow")
+region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_h06iu"]
-atlas = ExtResource("1_5grlp")
-region = Rect2(48, 24, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3wmw2"]
-atlas = ExtResource("1_5grlp")
-region = Rect2(72, 24, 24, 24)
+[sub_resource type="AtlasTexture" id="AtlasTexture_cyoi4"]
+atlas = ExtResource("2_bklow")
+region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ela8w"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_om87c")
+"texture": SubResource("AtlasTexture_ewv2x")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xtv2o")
+"texture": SubResource("AtlasTexture_s00qq")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_h06iu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3wmw2")
+"texture": SubResource("AtlasTexture_cyoi4")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_n7kh7"]
-radius = 4.12311
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v7agn"]
+size = Vector2(21, 17)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_an27m"]
-radius = 4.5
-height = 12.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6p2w7"]
+size = Vector2(20, 23)
 
 [node name="slime" type="CharacterBody2D"]
 collision_layer = 4
@@ -53,29 +45,29 @@ collision_mask = 3
 script = ExtResource("1_l8l68")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1, 0)
+position = Vector2(3, 5)
 sprite_frames = SubResource("SpriteFrames_ela8w")
 autoplay = "default"
-frame_progress = 0.439745
+frame_progress = 0.40661
 
 [node name="killzone" parent="." instance=ExtResource("2_7eceh")]
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
-position = Vector2(1, 6)
-shape = SubResource("CircleShape2D_n7kh7")
+position = Vector2(0.5, 9.5)
+shape = SubResource("RectangleShape2D_v7agn")
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
 position = Vector2(0, 10)
-target_position = Vector2(8, 0)
+target_position = Vector2(11, 0)
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]
 position = Vector2(0, 10)
-target_position = Vector2(-6, 0)
+target_position = Vector2(-10, 0)
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-target_position = Vector2(0, 12)
+target_position = Vector2(0, 20)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 6)
-shape = SubResource("CapsuleShape2D_an27m")
+position = Vector2(0, 9)
+shape = SubResource("RectangleShape2D_6p2w7")
