@@ -1,13 +1,13 @@
 CollisionShape2D
-Area2D
-Sprite2D
-Node
 AnimationPlayer
+Sprite2D
+AnimatedSprite2D
+Area2D
+Node
 TextureRect
 TextEdit
 Button
 Node2D
-AnimatedSprite2D
 CharacterBody2D
 RayCast2D
 AnimationTree
