@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=4 uid="uid://1ybelxwvhfjp"]
+[gd_scene load_steps=45 format=4 uid="uid://1ybelxwvhfjp"]
 
 [ext_resource type="PackedScene" uid="uid://dy8aoahhh7k3" path="res://scenes/player.tscn" id="1_2ryjp"]
 [ext_resource type="Texture2D" uid="uid://d2yvs2est1fuf" path="res://assets/Glacial-mountains-parallax-background_vnitti/Layers/sky_lightened.png" id="1_ycjmt"]
@@ -28,6 +28,16 @@
 [ext_resource type="PackedScene" uid="uid://cdqs7t5ni53s7" path="res://scenes/word/exit.tscn" id="26_iu0yo"]
 [ext_resource type="PackedScene" uid="uid://3wi7qwdysqvt" path="res://scenes/dialog_area.tscn" id="27_ca4wv"]
 [ext_resource type="PackedScene" uid="uid://bmeahf20i7ypc" path="res://scenes/pick.tscn" id="28_q3spq"]
+
+[sub_resource type="GDScript" id="GDScript_3jttt"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	Globals.current_level = 2
+	#pass # Replace with function body.
+"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3xijl"]
 load_path = "res://.godot/imported/Sci-fi Tileset re-imagined.png-50de1f3fc79a7d37778e014a036fbeac.ctex"
@@ -1422,6 +1432,7 @@ sources/0 = SubResource("TileSetAtlasSource_ddvj0")
 
 [node name="Game" type="Node2D"]
 position = Vector2(-1, 0)
+script = SubResource("GDScript_3jttt")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -1743,7 +1754,7 @@ text = "Mechanism Design: Molly, Joey
 [node name="Node" type="Node" parent="."]
 
 [node name="Flyer" parent="Node" instance=ExtResource("22_d57au")]
-position = Vector2(212, -283)
+position = Vector2(-104, -85)
 
 [node name="slime2" parent="Node" instance=ExtResource("22_da5kn")]
 position = Vector2(-330, -50)

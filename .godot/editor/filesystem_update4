@@ -1,5 +1,7 @@
-res://scenes/start_menu.tscn
+res://scenes/word/exit.tscn
 res://scenes/global.gdshader
+res://scenes/word/exit.gd
+res://scenes/start_menu.tscn
 res://scenes/game.tscn
 res://scenes/global.tscn
 res://scenes/hurtbox.tscn
@@ -9,11 +11,11 @@ res://scenes/nono.tscn
 res://scenes/player.tscn
 res://scenes/slime.tscn
 res://scenes/dialog_area.tscn
-res://scripts/pick.gd
-res://pick.tscn
-res://scenes/pick.tscn
 res://scenes/coin.tscn
-res://scripts/player.gd
+res://scenes/pick.tscn
 res://scenes/game_1.tscn
-res://scenes/word/exit.tscn
-res://scripts/exit.gd
+res://scenes/fly.tscn
+res://scenes/flyer.tscn
+res://scripts/global.gd
+res://game.gd
+res://scripts/player.gd
