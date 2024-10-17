@@ -1,11 +1,11 @@
 [gd_scene load_steps=18 format=3 uid="uid://tvdrc133q8gj"]
 
-[ext_resource type="Texture2D" uid="uid://b8pdyra5ipo4n" path="res://assets/spritesOld/fly.png" id="1_eur1c"]
+[ext_resource type="Texture2D" uid="uid://cc42ydy7gx6eg" path="res://assets/spritesOld/fly.png" id="1_eur1c"]
 [ext_resource type="Script" path="res://scripts/fly.gd" id="1_i31uo"]
-[ext_resource type="Texture2D" uid="uid://koyjnu5cpa6d" path="res://assets/spritesOld/fly_move.png" id="2_5psir"]
-[ext_resource type="Texture2D" uid="uid://c6bw18nm2d5g" path="res://assets/spritesOld/fly_dead.png" id="3_gjrww"]
-[ext_resource type="PackedScene" uid="uid://r50w8rs1xodt" path="res://scenes/hitbox.tscn" id="4_mfqky"]
-[ext_resource type="PackedScene" uid="uid://6h0wlirt34bq" path="res://scenes/hurtbox.tscn" id="5_g0pjr"]
+[ext_resource type="Texture2D" uid="uid://d1xoeneblj56v" path="res://assets/spritesOld/fly_move.png" id="2_5psir"]
+[ext_resource type="Texture2D" uid="uid://cmrj6ja2npnhs" path="res://assets/spritesOld/fly_dead.png" id="3_gjrww"]
+[ext_resource type="PackedScene" uid="uid://ef1udckcy1q4" path="res://scenes/hitbox.tscn" id="4_mfqky"]
+[ext_resource type="PackedScene" uid="uid://da6nv7adtauj4" path="res://scenes/hurtbox.tscn" id="5_g0pjr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wpf4f"]
 atlas = ExtResource("1_eur1c")
