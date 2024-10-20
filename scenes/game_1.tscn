@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://dkota2pix5j3h"]
+[gd_scene load_steps=34 format=4 uid="uid://dkota2pix5j3h"]
 
 [ext_resource type="Texture2D" uid="uid://dhxni7cbxuk6e" path="res://assets/cave/Sky.png" id="1_dgt1f"]
 [ext_resource type="Texture2D" uid="uid://chlodbvxwhxw6" path="res://assets/cave/DownLayer.png" id="2_ovse6"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bggu5vyq58d1y" path="res://scenes/platforms/I.tscn" id="14_3lyng"]
 [ext_resource type="Texture2D" uid="uid://c3rtfnb1wvl63" path="res://assets/Fossil/fossil.png" id="17_3gy5p"]
 [ext_resource type="PackedScene" uid="uid://b56lbq3mq58yg" path="res://scenes/nono.tscn" id="17_pclwp"]
+[ext_resource type="PackedScene" uid="uid://cdqs7t5ni53s7" path="res://scenes/word/exit.tscn" id="18_jq6mm"]
 [ext_resource type="PackedScene" uid="uid://bmeahf20i7ypc" path="res://scenes/pick.tscn" id="18_nkn3d"]
 [ext_resource type="PackedScene" uid="uid://ccbpp044n8j31" path="res://scenes/platforms/T.tscn" id="18_ofy28"]
 [ext_resource type="PackedScene" uid="uid://bm1o5l6kphdjf" path="res://scenes/platforms/O.tscn" id="19_t1u8r"]
@@ -1153,3 +1154,6 @@ scale = Vector2(1.13, 1)
 texture = ExtResource("17_3gy5p")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="exit" parent="." instance=ExtResource("18_jq6mm")]
+position = Vector2(-65, -279)

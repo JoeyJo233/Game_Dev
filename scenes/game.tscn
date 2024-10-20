@@ -1,6 +1,7 @@
 [gd_scene load_steps=44 format=4 uid="uid://1ybelxwvhfjp"]
 
 [ext_resource type="PackedScene" uid="uid://dy8aoahhh7k3" path="res://scenes/player.tscn" id="1_2ryjp"]
+[ext_resource type="Script" path="res://scenes/game.gd" id="1_6667o"]
 [ext_resource type="Texture2D" uid="uid://d2yvs2est1fuf" path="res://assets/Glacial-mountains-parallax-background_vnitti/Layers/sky_lightened.png" id="1_ycjmt"]
 [ext_resource type="Texture2D" uid="uid://5qnfeu7h50rk" path="res://assets/Glacial-mountains-parallax-background_vnitti/Layers/long/longCoud_bg.png" id="2_mv1u2"]
 [ext_resource type="Texture2D" uid="uid://ol2wbn87pwe" path="res://assets/Glacial-mountains-parallax-background_vnitti/Layers/long/longMoutain.png" id="3_6rta0"]
@@ -25,7 +26,6 @@
 [ext_resource type="FontFile" uid="uid://b7wauygk2p2pv" path="res://assets/font/PixelOperator8.ttf" id="21_o203w"]
 [ext_resource type="PackedScene" uid="uid://bro1vg2mo34r5" path="res://scenes/flyer.tscn" id="22_d57au"]
 [ext_resource type="PackedScene" uid="uid://g1bspnvwj1q6" path="res://scenes/slime.tscn" id="22_da5kn"]
-[ext_resource type="PackedScene" uid="uid://cdqs7t5ni53s7" path="res://scenes/word/exit.tscn" id="26_iu0yo"]
 [ext_resource type="PackedScene" uid="uid://3wi7qwdysqvt" path="res://scenes/dialog_area.tscn" id="27_ca4wv"]
 [ext_resource type="PackedScene" uid="uid://bmeahf20i7ypc" path="res://scenes/pick.tscn" id="28_q3spq"]
 
@@ -1422,6 +1422,7 @@ sources/0 = SubResource("TileSetAtlasSource_ddvj0")
 
 [node name="Game" type="Node2D"]
 position = Vector2(-1, 0)
+script = ExtResource("1_6667o")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -1756,9 +1757,6 @@ position = Vector2(600, -49)
 
 [node name="slime4" parent="Node" instance=ExtResource("22_da5kn")]
 position = Vector2(1203, -53)
-
-[node name="exit" parent="." instance=ExtResource("26_iu0yo")]
-position = Vector2(-1028, 12)
 
 [node name="DialogArea" parent="." instance=ExtResource("27_ca4wv")]
 position = Vector2(-840, -7)

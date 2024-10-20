@@ -1,9 +1,30 @@
-[gd_scene load_steps=8 format=3 uid="uid://bro1vg2mo34r5"]
+[gd_scene load_steps=14 format=3 uid="uid://bro1vg2mo34r5"]
 
 [ext_resource type="Texture2D" uid="uid://cc42ydy7gx6eg" path="res://assets/spritesOld/fly.png" id="1_14td6"]
 [ext_resource type="Script" path="res://scenes/flyer.gd" id="1_m2nvt"]
 [ext_resource type="Texture2D" uid="uid://cmrj6ja2npnhs" path="res://assets/spritesOld/fly_dead.png" id="3_e34ge"]
+[ext_resource type="Texture2D" uid="uid://bt64vav5gv4yx" path="res://assets/enemy_sprite/flyer.png" id="4_5qb3h"]
 [ext_resource type="PackedScene" uid="uid://gtx3vdl3ivha" path="res://scenes/killzone.tscn" id="4_n7sk8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hjyed"]
+atlas = ExtResource("4_5qb3h")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3v28"]
+atlas = ExtResource("4_5qb3h")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50rf6"]
+atlas = ExtResource("4_5qb3h")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7nc46"]
+atlas = ExtResource("4_5qb3h")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oeyg5"]
+atlas = ExtResource("4_5qb3h")
+region = Rect2(32, 32, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7ks11"]
 animations = [{
@@ -20,21 +41,30 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_14td6")
+"texture": SubResource("AtlasTexture_hjyed")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_e34ge")
+"texture": SubResource("AtlasTexture_l3v28")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_50rf6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7nc46")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oeyg5")
 }],
 "loop": true,
 "name": &"run",
-"speed": 1.0
+"speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_u2ruv"]
-size = Vector2(6.5, 3)
+[sub_resource type="CircleShape2D" id="CircleShape2D_wu3c4"]
+radius = 1.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_aokyk"]
-size = Vector2(7, 8)
+[sub_resource type="CircleShape2D" id="CircleShape2D_i15rx"]
+radius = 1.0
 
 [node name="Flyer" type="CharacterBody2D"]
 collision_layer = 8
@@ -46,15 +76,15 @@ position = Vector2(-4.875, 2)
 scale = Vector2(0.107422, 0.109375)
 sprite_frames = SubResource("SpriteFrames_7ks11")
 animation = &"run"
-frame_progress = 0.205354
+frame_progress = 0.947749
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-5.25, 2.5)
-shape = SubResource("RectangleShape2D_u2ruv")
+position = Vector2(-5, 2)
+shape = SubResource("CircleShape2D_wu3c4")
 one_way_collision_margin = 3.0
 
 [node name="killzone" parent="." instance=ExtResource("4_n7sk8")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
-position = Vector2(-5.5, 2)
-shape = SubResource("RectangleShape2D_aokyk")
+position = Vector2(-5, 2)
+shape = SubResource("CircleShape2D_i15rx")

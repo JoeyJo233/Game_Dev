@@ -21,6 +21,9 @@ func _physics_process(delta: float) -> void:
 	else: 
 		jump_count = 0
 		dash_count = 0
+		
+	if Globals.current_level == 2:
+		jump_max = 1
 
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and jump_count <= jump_max:
@@ -28,10 +31,8 @@ func _physics_process(delta: float) -> void:
 		jump_count += 1
 	
 	if Input.is_action_just_pressed("dash"):
-		print("333")
 		is_dashing = true
 		dash_time = dash_duration
-		print(dash_time)
 	var direction := Input.get_axis("move_left", "move_right")	
 	
 	if is_dashing:
