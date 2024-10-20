@@ -1,18 +1,18 @@
 [gd_scene load_steps=4 format=3 uid="uid://cdqs7t5ni53s7"]
 
+[ext_resource type="Script" path="res://scripts/exit.gd" id="1_euspt"]
 [ext_resource type="Texture2D" uid="uid://bl51aehsvig84" path="res://assets/spritesOld/spritesheet_tiles.png" id="1_y7i2x"]
-[ext_resource type="Script" path="res://scenes/word/exit.gd" id="1_y7kpm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7g68u"]
-size = Vector2(87.5, 240.25)
+size = Vector2(69, 240.25)
 
 [node name="exit" type="Area2D"]
 collision_layer = 0
 collision_mask = 2
-script = ExtResource("1_y7kpm")
+script = ExtResource("1_euspt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(7.25, -111.875)
+position = Vector2(-2, -111.875)
 shape = SubResource("RectangleShape2D_7g68u")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

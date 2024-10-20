@@ -20,3 +20,12 @@ res://scenes/fly.tscn
 res://scenes/game_hidden.tscn
 res://scripts/start_menu.gd
 res://scripts/exit.gd
+res://scripts/coin.gd
+res://scripts/dialog_area.gd
+res://scripts/fly.gd
+res://scripts/hurtbox.gd
+res://scripts/killzone.gd
+res://scripts/nono.gd
+res://scenes/nono.gd
+res://scripts/pick.gd
+res://scripts/slime.gd
