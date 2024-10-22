@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=4 uid="uid://1ybelxwvhfjp"]
+[gd_scene load_steps=50 format=4 uid="uid://1ybelxwvhfjp"]
 
 [ext_resource type="PackedScene" uid="uid://dy8aoahhh7k3" path="res://scenes/player.tscn" id="1_2ryjp"]
 [ext_resource type="Script" path="res://scenes/game.gd" id="1_6667o"]
@@ -1420,6 +1420,106 @@ texture = ExtResource("8_omfum")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ddvj0")
 
+[sub_resource type="Animation" id="Animation_llbkj"]
+resource_name = "new_animation"
+length = 5.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2.06667, 3, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-390, -53), Vector2(-301, -53), Vector2(-265, -69), Vector2(-219, -69), Vector2(-183, -85), Vector2(-60, -86)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 2, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 6.28319, 6.28319, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ebn2v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-390, -54)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vva5w"]
+_data = {
+"RESET": SubResource("Animation_ebn2v"),
+"new_animation": SubResource("Animation_llbkj")
+}
+
+[sub_resource type="Animation" id="Animation_uqt3u"]
+resource_name = "new_animation"
+length = 1.5
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(265, -53), Vector2(341, -53)]
+}
+
+[sub_resource type="Animation" id="Animation_p5rdk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(265, -53)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cjuu2"]
+_data = {
+"RESET": SubResource("Animation_p5rdk"),
+"new_animation": SubResource("Animation_uqt3u")
+}
+
 [node name="Game" type="Node2D"]
 position = Vector2(-1, 0)
 script = ExtResource("1_6667o")
@@ -1432,7 +1532,7 @@ scale = Vector2(9.75197, 7.12535)
 motion_scale = Vector2(0, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/sky"]
-position = Vector2(24.0977, 23.7181)
+position = Vector2(14.5612, 23.4374)
 texture = ExtResource("1_ycjmt")
 centered = false
 
@@ -1708,6 +1808,14 @@ offset_bottom = -1252.0
 theme_override_fonts/font = ExtResource("21_o203w")
 text = "Director: Joey"
 
+[node name="Label7" type="Label" parent="."]
+offset_left = -632.0
+offset_top = -1376.0
+offset_right = -416.0
+offset_bottom = -1353.0
+theme_override_fonts/font = ExtResource("21_o203w")
+text = "\"Dare to jump...\""
+
 [node name="Label2" type="Label" parent="."]
 offset_left = -117.0
 offset_top = -1230.0
@@ -1741,27 +1849,48 @@ theme_override_fonts/font = ExtResource("21_o203w")
 text = "Mechanism Design: Molly, Joey
 "
 
-[node name="Node" type="Node" parent="."]
+[node name="enemies" type="Node" parent="."]
 
-[node name="Flyer" parent="Node" instance=ExtResource("22_d57au")]
-position = Vector2(212, -283)
+[node name="Flyer" parent="enemies" instance=ExtResource("22_d57au")]
+position = Vector2(241, -354)
 
-[node name="slime2" parent="Node" instance=ExtResource("22_da5kn")]
-position = Vector2(-330, -50)
+[node name="slime2" parent="enemies" instance=ExtResource("22_da5kn")]
+position = Vector2(-390, -54)
 
-[node name="slime" parent="Node" instance=ExtResource("22_da5kn")]
-position = Vector2(273, -50)
+[node name="AnimationPlayer" type="AnimationPlayer" parent="enemies/slime2"]
+libraries = {
+"": SubResource("AnimationLibrary_vva5w")
+}
+autoplay = "new_animation"
 
-[node name="slime3" parent="Node" instance=ExtResource("22_da5kn")]
-position = Vector2(600, -49)
+[node name="slime" parent="enemies" instance=ExtResource("22_da5kn")]
+position = Vector2(265, -53)
 
-[node name="slime4" parent="Node" instance=ExtResource("22_da5kn")]
-position = Vector2(1203, -53)
+[node name="AnimationPlayer" type="AnimationPlayer" parent="enemies/slime"]
+libraries = {
+"": SubResource("AnimationLibrary_cjuu2")
+}
+autoplay = "new_animation"
+
+[node name="slime3" parent="enemies" instance=ExtResource("22_da5kn")]
+position = Vector2(622, -54)
+
+[node name="Flyer2" parent="enemies" instance=ExtResource("22_d57au")]
+position = Vector2(1552, -175)
 
 [node name="DialogArea" parent="." instance=ExtResource("27_ca4wv")]
 position = Vector2(-840, -7)
 
 [node name="pick" parent="." instance=ExtResource("28_q3spq")]
-position = Vector2(-550, -69)
+position = Vector2(469, -397)
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 1526.0
+offset_top = -1393.0
+offset_right = 1566.0
+offset_bottom = -1344.0
+scale = Vector2(3.46716, 3.50142)
+text = "
+門"
 
 [connection signal="body_entered" from="pick" to="player" method="_on_pick_body_entered"]

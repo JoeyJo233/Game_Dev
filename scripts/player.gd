@@ -11,6 +11,7 @@ var dash_speed = 600
 var dash_duration = 0.2
 var is_dashing = false
 var dash_time = 0
+var first_time = true
 
 
 # Fixed frequency operation default 60 times/second
@@ -22,7 +23,8 @@ func _physics_process(delta: float) -> void:
 		jump_count = 0
 		dash_count = 0
 		
-	if Globals.current_level == 2:
+	if Globals.current_level == 2 && first_time:
+		first_time = false
 		jump_max = 1
 
 	# Handle jump.

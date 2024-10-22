@@ -6,7 +6,7 @@ extends Area2D
 
 func _on_body_entered(body: Node2D) -> void:
 	if player:
-		player.jump_max = 1
+		player.jump_max += 1
 		queue_free()
 		
 	

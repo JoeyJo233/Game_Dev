@@ -15,20 +15,21 @@ func _ready() -> void:
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	# 检查是否在地面上
-	if is_on_floor():
-		position.x += speed * delta * direction
-		if ray_cast_left.is_colliding():
-			direction *= -1
-			animated_sprite_2d.flip_h = false
-		if ray_cast_right.is_colliding():
-			direction *= -1
-			animated_sprite_2d.flip_h = true
-	else:
-		direction *= -1
-		animated_sprite_2d.flip_h = true
-		position.x += speed * delta * direction
-	
-	move_and_slide()
+	## 检查是否在地面上
+	#if is_on_floor():
+		#position.x += speed * delta * direction
+		#if ray_cast_left.is_colliding():
+			#direction *= -1
+			#animated_sprite_2d.flip_h = false
+		#if ray_cast_right.is_colliding():
+			#direction *= -1
+			#animated_sprite_2d.flip_h = true
+	#else:
+		#direction *= -1
+		#animated_sprite_2d.flip_h = true
+		#position.x += speed * delta * direction
+	#
+	#move_and_slide()
+	pass
 	
 		

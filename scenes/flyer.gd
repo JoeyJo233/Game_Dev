@@ -23,7 +23,8 @@ func _process(delta: float):
 			
 			var direction = global_position.direction_to(player.global_position).normalized()
 			var velocity = direction * speed * delta
-			global_position += velocity
+			global_position.x += velocity.x
+			global_position.y += 0.5*velocity.y
 			
 
 			# 根据移动方向调整Sprite的朝向
