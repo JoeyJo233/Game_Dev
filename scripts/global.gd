@@ -3,6 +3,8 @@ extends Node
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 var current_level = 1
 
+var has_item = false
+
 func reload_word():
 	animation_player.play_backwards("fade-in");
 	await(animation_player.animation_finished) 

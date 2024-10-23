@@ -1,0 +1,3 @@
+if {pickPeach} == false:
+	join character left
+	character: 这里似乎跳一次上不去嘞，有没有什么果实能让我们跳的更高...

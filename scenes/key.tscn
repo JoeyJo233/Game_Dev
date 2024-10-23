@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6f0h3jvmmr2h"]
+
+[ext_resource type="Texture2D" uid="uid://dfej1yv25ul0" path="res://assets/enemy_sprite/key-2824086_1280.png" id="1_7r8fr"]
+[ext_resource type="Script" path="res://scripts/key.gd" id="1_w14cy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_465u2"]
+size = Vector2(12, 14)
+
+[node name="key" type="Area2D"]
+collision_layer = 256
+collision_mask = 2
+script = ExtResource("1_w14cy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.81251, -1.5)
+scale = Vector2(0.00810546, 0.0103011)
+texture = ExtResource("1_7r8fr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -1)
+shape = SubResource("RectangleShape2D_465u2")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

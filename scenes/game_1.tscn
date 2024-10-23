@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=4 uid="uid://dkota2pix5j3h"]
+[gd_scene load_steps=46 format=4 uid="uid://dkota2pix5j3h"]
 
 [ext_resource type="Texture2D" uid="uid://dhxni7cbxuk6e" path="res://assets/cave/Sky.png" id="1_dgt1f"]
 [ext_resource type="Texture2D" uid="uid://chlodbvxwhxw6" path="res://assets/cave/DownLayer.png" id="2_ovse6"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://bm1o5l6kphdjf" path="res://scenes/platforms/O.tscn" id="19_t1u8r"]
 [ext_resource type="PackedScene" uid="uid://cj8sdemjodphi" path="res://scenes/platforms/L.tscn" id="20_fxd02"]
 [ext_resource type="PackedScene" uid="uid://bro1vg2mo34r5" path="res://scenes/flyer.tscn" id="20_mf8an"]
+[ext_resource type="PackedScene" uid="uid://3wi7qwdysqvt" path="res://scenes/dialog_area.tscn" id="21_fn1l2"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3xijl"]
 load_path = "res://.godot/imported/Sci-fi Tileset re-imagined.png-50de1f3fc79a7d37778e014a036fbeac.ctex"
@@ -993,6 +994,33 @@ _data = {
 "new_animation": SubResource("Animation_dyh3a")
 }
 
+[sub_resource type="Animation" id="Animation_uwk7j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-141, 171)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
 [sub_resource type="Animation" id="Animation_n7ebj"]
 resource_name = "enemy_animation"
 length = 11.0
@@ -1022,7 +1050,13 @@ tracks/1/keys = {
 "values": [0.0, -0.479966, -0.479966, 0.0]
 }
 
-[sub_resource type="Animation" id="Animation_uwk7j"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6iyta"]
+_data = {
+"RESET": SubResource("Animation_uwk7j"),
+"enemy_animation": SubResource("Animation_n7ebj")
+}
+
+[sub_resource type="Animation" id="Animation_tqu7k"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -1034,7 +1068,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-141, 171)]
+"values": [Vector2(235, 458)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1047,12 +1081,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [0.0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_6iyta"]
-_data = {
-"RESET": SubResource("Animation_uwk7j"),
-"enemy_animation": SubResource("Animation_n7ebj")
 }
 
 [sub_resource type="Animation" id="Animation_o26i1"]
@@ -1083,7 +1111,13 @@ tracks/1/keys = {
 "values": [0.0, 3.14159, 6.28319]
 }
 
-[sub_resource type="Animation" id="Animation_tqu7k"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1o30b"]
+_data = {
+"RESET": SubResource("Animation_tqu7k"),
+"new_animation": SubResource("Animation_o26i1")
+}
+
+[sub_resource type="Animation" id="Animation_5kxfw"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -1095,25 +1129,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(235, 458)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_1o30b"]
-_data = {
-"RESET": SubResource("Animation_tqu7k"),
-"new_animation": SubResource("Animation_o26i1")
+"values": [Vector2(-358, 457)]
 }
 
 [sub_resource type="Animation" id="Animation_d5xfs"]
@@ -1131,21 +1147,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-358, 457), Vector2(146, 457)]
-}
-
-[sub_resource type="Animation" id="Animation_5kxfw"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-358, 457)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lh8i0"]
@@ -1308,7 +1309,7 @@ libraries = {
 }
 
 [node name="pick" parent="." instance=ExtResource("18_nkn3d")]
-position = Vector2(-344, 435)
+position = Vector2(-347, 443)
 scale = Vector2(1.46297, 1.35428)
 
 [node name="fossil" type="Sprite2D" parent="."]
@@ -1355,3 +1356,7 @@ libraries = {
 "": SubResource("AnimationLibrary_lh8i0")
 }
 autoplay = "new_animation"
+
+[node name="DialogArea" parent="." instance=ExtResource("21_fn1l2")]
+position = Vector2(-186, -223)
+dialogId = 4

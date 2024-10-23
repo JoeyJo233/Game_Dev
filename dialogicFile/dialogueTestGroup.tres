@@ -1,9 +1,12 @@
-[gd_resource type="Resource" script_class="dialogue_group" load_steps=7 format=3 uid="uid://b8tsgu6hmh84f"]
+[gd_resource type="Resource" script_class="dialogue_group" load_steps=13 format=3 uid="uid://b8tsgu6hmh84f"]
 
 [ext_resource type="Script" path="res://scripts/dialogue.gd" id="1_oxobb"]
 [ext_resource type="Script" path="res://scripts/dialogue_group.gd" id="2_c3qjo"]
 [ext_resource type="Resource" path="res://dialogicFile/timeLine1.dtl" id="2_kgrbv"]
 [ext_resource type="Resource" path="res://dialogicFile/timeline2.dtl" id="3_fws01"]
+[ext_resource type="Resource" path="res://dialogicFile/keyLine.dtl" id="4_iph2s"]
+[ext_resource type="Resource" path="res://dialogicFile/timeline5.dtl" id="5_s15mn"]
+[ext_resource type="Resource" path="res://dialogicFile/jumpLine.dtl" id="6_7tndy"]
 
 [sub_resource type="Resource" id="Resource_1f3og"]
 script = ExtResource("1_oxobb")
@@ -15,6 +18,21 @@ script = ExtResource("1_oxobb")
 dialogId = 2
 dialogTimeLine = ExtResource("3_fws01")
 
+[sub_resource type="Resource" id="Resource_6ghtm"]
+script = ExtResource("1_oxobb")
+dialogId = 3
+dialogTimeLine = ExtResource("4_iph2s")
+
+[sub_resource type="Resource" id="Resource_opp25"]
+script = ExtResource("1_oxobb")
+dialogId = 4
+dialogTimeLine = ExtResource("5_s15mn")
+
+[sub_resource type="Resource" id="Resource_vryty"]
+script = ExtResource("1_oxobb")
+dialogId = 5
+dialogTimeLine = ExtResource("6_7tndy")
+
 [resource]
 script = ExtResource("2_c3qjo")
-dialogue_list = Array[ExtResource("1_oxobb")]([SubResource("Resource_1f3og"), SubResource("Resource_8dybx")])
+dialogue_list = Array[ExtResource("1_oxobb")]([SubResource("Resource_1f3og"), SubResource("Resource_8dybx"), SubResource("Resource_6ghtm"), SubResource("Resource_opp25"), SubResource("Resource_vryty")])
