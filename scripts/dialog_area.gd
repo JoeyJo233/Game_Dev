@@ -19,7 +19,7 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 
 # 每帧调用，持续检查按键输入
 func _process(delta: float) -> void	:	
-	if is_player_in_area and Input.is_action_just_pressed("q"):  # 检查是否按下了Q键
+	if is_player_in_area:  # 检查是否按下了Q键
 			DialogicManager.start_dialog_by_id(dialogId)
 			
    #continue_dialog()  # 推进对话
