@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://jbjjjvuvdbrp"
+path="res://.godot/imported/Moonlit Library (1).mp3-4e13395df94aa65bc1bb5adff1b2f3ab.mp3str"
+
+[deps]
+
+source_file="res://assets/bgm/Moonlit Library (1).mp3"
+dest_files=["res://.godot/imported/Moonlit Library (1).mp3-4e13395df94aa65bc1bb5adff1b2f3ab.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

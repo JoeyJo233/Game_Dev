@@ -8,8 +8,8 @@
 [node name="startMenu" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 1150.0
-offset_bottom = 1280.0
+offset_right = 1371.0
+offset_bottom = 1327.0
 texture = ExtResource("2_rf5jk")
 stretch_mode = 3
 
